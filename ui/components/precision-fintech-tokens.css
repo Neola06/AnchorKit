@@ -56,3 +56,71 @@
   /* Transitions */
   --pf-transition: all 0.15s;
 }
+
+/* ─── Light Theme ────────────────────────────────────────────────────────────
+ * Mirrors the --ak-* light/dark pairing in themes.css. Keeps the neon-mint
+ * accent intent but rebases surfaces/text onto a light canvas so the
+ * --pf-* and --ak-* tokens stay coherent when the page is in light mode.
+ */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Brand colors (mint darkened slightly for contrast on light surfaces) */
+    --pf-mint: #00c98a;
+    --pf-mint-hover: #00a875;
+    --pf-mint-dim: rgba(0, 201, 138, 0.12);
+    --pf-mint-border: rgba(0, 201, 138, 0.3);
+    --pf-mint-glow: rgba(0, 201, 138, 0.2);
+    --pf-mint-pulse-start: rgba(0, 201, 138, 0.5);
+    --pf-mint-pulse-end: rgba(0, 201, 138, 0);
+    --pf-danger: #d63348;
+
+    /* Backgrounds */
+    --pf-bg: #ffffff;
+    --pf-surface: #f8f8f8;
+    --pf-surface-alt: #f0f0f0;
+
+    /* Borders */
+    --pf-border: #e0e0e0;
+    --pf-border-subtle: #f0f0f0;
+    --pf-border-card: #ebebeb;
+    --pf-border-footer: #eeeeee;
+
+    /* Text */
+    --pf-text: #141414;
+    --pf-text-muted: #5a5a5a;
+    --pf-text-dim: #6b6b6b;
+    --pf-text-ghost: #d0d0d0;
+    --pf-text-danger: #d63348;
+  }
+}
+
+/* Manual override: [data-theme="light"] on any ancestor */
+[data-theme="light"] {
+  /* Brand colors (mint darkened slightly for contrast on light surfaces) */
+  --pf-mint: #00c98a;
+  --pf-mint-hover: #00a875;
+  --pf-mint-dim: rgba(0, 201, 138, 0.12);
+  --pf-mint-border: rgba(0, 201, 138, 0.3);
+  --pf-mint-glow: rgba(0, 201, 138, 0.2);
+  --pf-mint-pulse-start: rgba(0, 201, 138, 0.5);
+  --pf-mint-pulse-end: rgba(0, 201, 138, 0);
+  --pf-danger: #d63348;
+
+  /* Backgrounds */
+  --pf-bg: #ffffff;
+  --pf-surface: #f8f8f8;
+  --pf-surface-alt: #f0f0f0;
+
+  /* Borders */
+  --pf-border: #e0e0e0;
+  --pf-border-subtle: #f0f0f0;
+  --pf-border-card: #ebebeb;
+  --pf-border-footer: #eeeeee;
+
+  /* Text */
+  --pf-text: #141414;
+  --pf-text-muted: #5a5a5a;
+  --pf-text-dim: #6b6b6b;
+  --pf-text-ghost: #d0d0d0;
+  --pf-text-danger: #d63348;
+}
